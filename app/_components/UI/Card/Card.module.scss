@@ -1,0 +1,51 @@
+$color-primary-0: #65CAB6;	// Main Primary color */
+$color-primary-1: #C9F5EC;
+$color-primary-2: #93E2D3;
+$color-primary-3: #40AD97;
+$color-primary-4: #259680;
+
+$color-secondary-1-0: #FFD07F;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFEED1;
+$color-secondary-1-2: #FFDEA6;
+$color-secondary-1-3: #FFC45E;
+$color-secondary-1-4: #EBAA3A;
+
+$color-secondary-2-0: #F87C8D;	// Main Secondary color (2) */
+$color-secondary-2-1: #FED0D6;
+$color-secondary-2-2: #FBA3AF;
+$color-secondary-2-3: #F45A6F;
+$color-secondary-2-4: #E0374E;
+
+$flex: calc(33.333% - 1.35rem);
+.card{
+    flex: 0 0 $flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary-2-2;
+    border-radius: 6px;
+    padding: 2rem;
+    user-select: none;
+    &>*:not(:last-child){
+        margin: 0 0 1.3rem 0;
+    }
+    .image{
+        border-radius: 6px;
+        overflow: hidden;
+        img{
+            pointer-events: none;
+            border-radius: 6px;
+        }
+    }
+    .title{
+        font-weight: 700;
+        color: $color-secondary-2-4;
+    }
+    .description{
+        height: 50px;
+        overflow: hidden;
+        text-align: justify;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    }
+}

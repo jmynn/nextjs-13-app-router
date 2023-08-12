@@ -1,0 +1,79 @@
+$color-primary-0: #330020;	// Main Primary color */
+$color-primary-1: #3E082A;
+$color-primary-2: #320020;
+$color-primary-3: #550035;
+$color-primary-4: #6F0046;
+
+$color-secondary-1-0: #5C5C7C;	// Main Secondary color (1) */
+$color-secondary-1-1: #88889C;
+$color-secondary-1-2: #70708B;
+$color-secondary-1-3: #4A4A6E;
+$color-secondary-1-4: #3A3A5F;
+
+$color-secondary-2-0: #C5BEB6;	// Main Secondary color (2) */
+$color-secondary-2-1: #FFFFFF;
+$color-secondary-2-2: #E9DED3;
+$color-secondary-2-3: #FFEEDC;
+$color-secondary-2-4: #FFE7CC;
+.show{
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    background: $color-secondary-1-4;
+    color: $color-secondary-2-3;
+    padding: 1.5rem 0;
+    border-radius: 6px;
+    transition: all .3s ease;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        transition: all .3s ease;
+    }
+}
+.dialog{
+    &[open]{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        aspect-ratio: 1/1;
+        margin: auto;
+        background: $color-secondary-1-1;
+        border-radius: 6px;
+        padding: 1rem;
+        overscroll-behavior-y: contain;
+        overflow-y: auto;
+        button{
+            width: 20%;
+            border-radius: 6px;
+            background: $color-primary-4;
+            color: $color-secondary-2-2;
+            font-size: 1.6rem;
+            user-select: none;
+            margin: 0 0 1rem auto;
+            transition: all .3s ease;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.8;
+                transition: all .3s ease;
+            }
+        }
+        .title{
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: $color-secondary-2-3;
+            line-height: 1.2;
+            margin: 0 0 1.5rem 0;
+        }
+        .text{
+            font-size: 1.8rem;
+            line-height: 1.1;
+            color: $color-secondary-2-4;
+            text-align: justify;
+        }
+    }
+    &::backdrop{
+        background: color-mix(in srgb, $color-primary-0, transparent 40%);
+        width: 100vw;
+    }
+}

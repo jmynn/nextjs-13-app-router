@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "css-modules"
+  ],
+  "extends": ["next",  "plugin:css-modules/recommended"],
+  "rules": {
+    "react/no-unescaped-entities": "warn",
+    "react-hooks/rules-of-hooks": "off", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "css-modules/no-unused-class": "warn",
+    "css-modules/no-undef-class": "warn"
+  }
+}

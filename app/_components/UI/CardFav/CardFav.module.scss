@@ -1,0 +1,67 @@
+$color-primary-0: #65CAB6;	// Main Primary color */
+$color-primary-1: #C9F5EC;
+$color-primary-2: #93E2D3;
+$color-primary-3: #40AD97;
+$color-primary-4: #259680;
+
+$color-secondary-1-0: #FFD07F;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFEED1;
+$color-secondary-1-2: #FFDEA6;
+$color-secondary-1-3: #FFC45E;
+$color-secondary-1-4: #EBAA3A;
+
+$color-secondary-2-0: #F87C8D;	// Main Secondary color (2) */
+$color-secondary-2-1: #FED0D6;
+$color-secondary-2-2: #FBA3AF;
+$color-secondary-2-3: #F45A6F;
+$color-secondary-2-4: #E0374E;
+.fav{
+    display: flex;
+    align-items: stretch;
+    padding: 1rem;
+    background: $color-secondary-2-2;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    .image{
+        flex: 0 0 auto;
+        border-radius: 6px;
+        overflow: hidden;
+        img{
+            border-radius: 6px;
+        }
+        margin: 0 1rem 0 0;
+    }
+    .info{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        & > *:not(:last-child){
+            margin: 0 0 1rem 0;
+        }
+        .title{
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.2;
+            color: $color-primary-3;
+        }
+        .btns{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .open{
+                flex: 0 0 49%;
+                text-align: center;
+                display: block;
+                background: none;
+                letter-spacing: 0.1em;
+                line-height: 1.2;
+                font-size: 1.6rem;
+                padding: .5rem 1rem;
+                border-radius: 6px;
+                background: $color-secondary-1-3;
+            }
+        }       
+    }
+}

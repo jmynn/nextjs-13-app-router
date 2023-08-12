@@ -1,0 +1,187 @@
+@layer components;
+@layer components {
+    .layer{
+        --layer-flex-direction: column;
+        --layer-padding: 1.5rem 3rem;
+
+        --header-background: #FBA3AF;
+        --header-color: #259680;
+        --header-font-size: 2.5rem;
+        --header-padding: 2rem 4rem;
+        --header-font-weight: 700;
+
+        --main-background: #93E2D3;
+        --main-color: #F45A6F;
+        --main-font-size: 2.8rem;
+        --main-color-title: #FFEED1;
+        --main-div-hidden: none;
+        --main-text-line-height: 1.5;
+        
+        --footer-background: #FFC45E;
+        --footer-color: #FED0D6;
+        --footer-font-size: 2.5rem;
+        --footer-padding: 2rem 4rem;
+
+        display: flex;
+        flex-direction: var(--layer-flex-direction);
+        padding: var(--layer-padding);
+        .header{
+            background: var(--header-background);
+            color: var(--header-color);
+            font-size: var(--header-font-size);
+            font-weight: var(--header-font-weight);
+            padding: var(--header-padding);
+        }
+
+        .main{
+            background: var(--main-background);
+            color: var(--main-color);
+            font-size: var(--main-font-size);
+            .title{
+                color: var(--main-color-title);
+            }
+            
+            .text{
+                line-height: var(--main-text-line-height);
+            }
+            
+            .hidden{
+                display: var(--main-div-hidden);
+            }
+        }
+
+        .footer{
+            background: var(--footer-background);
+            color: var(--footer-color);
+            font-size: var(--footer-font-size);
+            padding: var(--footer-padding);
+        }
+    }
+}
+
+@layer light{
+    .layer{
+        --header-background: #F5EFEE;
+        --header-color: #ED7B63;
+        --header-font-size: 2rem;
+        --header-padding: 1rem 2rem;
+
+        --main-background: #EAD0CB;
+        --main-color: #48AC6D;
+        --main-font-size: 2.2rem;
+        --main-color-title: #FF370D;
+        --main-div-hidden: block;
+        --main-text-line-height: 1.1;
+        
+        --footer-background: #F0B8AC;
+        --footer-color: #93AA9C;
+        --footer-font-size: 2rem;
+        --footer-padding: 1rem 2rem;
+
+        display: flex;
+        flex-direction: var(--layer-flex-direction);
+        padding: var(--layer-padding);
+        .header{
+            background: var(--header-background);
+            color: var(--header-color);
+            font-size: var(--header-font-size);
+            font-weight: var(--header-font-weight);
+            padding: var(--header-padding);
+        }
+
+        .main{
+            background: var(--main-background);
+            color: var(--main-color);
+            font-size: var(--main-font-size);
+            .title{
+                color: var(--main-color-title);
+            }
+            
+            .text{
+                line-height: var(--main-text-line-height);
+            }
+            
+            .hidden{
+                display: var(--main-div-hidden);
+            }
+        }
+
+        .footer{
+            background: var(--footer-background);
+            color: var(--footer-color);
+            font-size: var(--footer-font-size);
+            padding: var(--footer-padding);
+        }
+    }
+}
+
+@layer dark{
+    .layer{
+        --layer-flex-direction: column-reverse;
+        --layer-padding: 2.5rem 2rem;
+
+        --header-background: #111310;
+        --header-color: #616C5B;
+        --header-font-size: 3rem;
+        --header-padding: 2rem 4rem;
+
+        --main-background: #393D36;
+        --main-color: #6B6563;
+        --main-font-size: 2.2rem;
+        --main-color-title: #5B6257;
+        --main-div-hidden: block;
+        --main-text-line-height: 1.6;
+        --main-div-color: #141111;
+        
+        --footer-background: #110E10;
+        --footer-color: #736165;
+        --footer-font-size: 1rem;
+        --footer-padding: 1rem;
+
+        display: flex;
+        flex-direction: var(--layer-flex-direction);
+        padding: var(--layer-padding);
+        .header{
+            background: var(--header-background);
+            color: var(--header-color);
+            font-size: var(--header-font-size);
+            font-weight: var(--header-font-weight);
+            padding: var(--header-padding);
+        }
+
+        .main{
+            background: var(--main-background);
+            color: var(--main-color);
+            font-size: var(--main-font-size);
+            .title{
+                color: var(--main-color-title);
+            }
+            
+            .text{
+                line-height: var(--main-text-line-height);
+            }
+            
+            .hidden{
+                display: var(--main-div-hidden);
+            }
+        }
+
+        .footer{
+            background: var(--footer-background);
+            color: var(--footer-color);
+            font-size: var(--footer-font-size);
+            padding: var(--footer-padding);
+        }
+
+        .hidden{
+            color: var(--main-div-color);
+        }
+    }
+}
+
+@media screen and (prefers-color-scheme: dark){
+    @layer components, dark;
+}
+@media screen and (prefers-color-scheme: light){
+    @layer components, light;
+}

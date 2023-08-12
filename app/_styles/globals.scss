@@ -1,0 +1,135 @@
+$color-primary-0: #65CAB6;	// Main Primary color */
+$color-primary-1: #C9F5EC;
+$color-primary-2: #93E2D3;
+$color-primary-3: #40AD97;
+$color-primary-4: #259680;
+
+$color-secondary-1-0: #FFD07F;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFEED1;
+$color-secondary-1-2: #FFDEA6;
+$color-secondary-1-3: #FFC45E;
+$color-secondary-1-4: #EBAA3A;
+
+$color-secondary-2-0: #F87C8D;	// Main Secondary color (2) */
+$color-secondary-2-1: #FED0D6;
+$color-secondary-2-2: #FBA3AF;
+$color-secondary-2-3: #F45A6F;
+$color-secondary-2-4: #E0374E;
+html, body{
+    scrollbar-gutter: stable;
+    // overflow-x: hidden;
+}
+::selection{
+    background: $color-secondary-2-4;
+    color: $color-secondary-2-1;
+}
+::-webkit-scrollbar{
+    width: 1.3rem;
+   
+}
+::-webkit-scrollbar-thumb{
+    background: $color-secondary-1-4;
+    border-radius: 21px;
+    border: .3rem solid $color-secondary-1-1;
+    &:hover{
+        background: $color-secondary-1-0;
+    }
+}
+::-webkit-scrollbar-track{
+    background: $color-secondary-1-1;
+}
+body{
+    font-size: 1.6rem;
+    color: $color-primary-4;
+    background-color: $color-secondary-2-1;
+    min-height: 100%;
+    .container{
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+        header, footer{
+            flex: 0 0 auto;
+        }
+        main {
+            padding: 2.5rem 0;
+            flex: 1 1 auto;
+        }
+    }
+    .nf{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .nfTitle{
+            font-size: 3rem;
+            margin: 0 0 2.5rem 0;
+            color: $color-secondary-1-4;
+        }
+        .nfBack{
+            margin: 2.5rem 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.2ren;
+            background: $color-secondary-1-2;
+            color: $color-secondary-2-3;
+            border-radius: 6px;
+            transition: background ease-in-out .3s;
+            padding: 1.5rem 3rem;
+            &:hover{
+                cursor: pointer;
+                background: $color-secondary-2-2;
+                transition: background ease-in-out .3s;
+            }
+        }
+    }
+    .banners{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 2rem;
+        border-radius: 6px;
+        background: $color-secondary-1-1;
+        .banner{
+            flex: 0 0 49%;
+            font-size: 2.2rem;
+            border: 1px solid $color-primary-2;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+            & > *:not(:last-child){
+                margin: 0 0 2rem 0;
+                &:is(button){
+                    margin: 0 auto 2rem;
+                }
+            }
+            h1{
+                font-size: 3rem;
+                line-height: 1.2;
+                color: $color-secondary-2-4;
+            }
+            h3{
+                font-size: 2.5rem;
+                line-height: 1.2;
+                color: $color-secondary-2-0;
+            }
+            p{
+                font-size: 1.8rem;
+                color: $color-secondary-1-4;
+            }
+            button{
+                background: $color-primary-0;
+                font-size: 1.8rem;
+                line-height: 1.2;
+                padding: 1rem 2rem;
+                border-radius: 6px;
+                margin: 0 auto;
+                user-select: none;
+                transition: all ease-in-out .3s;
+            }
+        }
+    }
+
+}
