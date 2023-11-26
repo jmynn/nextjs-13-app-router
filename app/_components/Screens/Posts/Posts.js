@@ -16,7 +16,8 @@ export default function Posts({ServerComponent}) {
 	const [posts, setPosts] = useState([])
 	const [query, setQuery] = useState("")
 	const deffered = useDeferredValue(posts)
-  const fetcher = useCallback(async () => {
+  // fetcher излишен здесь, в эффект надо было запихнуть
+	const fetcher = useCallback(async () => {
     const data = await fetch('https://jsonplaceholder.typicode.com/posts')
     const parsed = await data.json()
     setPosts(parsed)
